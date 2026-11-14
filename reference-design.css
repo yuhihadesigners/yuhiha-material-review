@@ -1,0 +1,251 @@
+/* Layout and photograph crops from Seoyeon's published editorial-canvas.
+   https://yuhiha-layout-preview-1106.totalmockingbird.chatgpt.site/
+   Keep production controls/storage; match the reference 73 / 27 split and 1536px scaled canvas. */
+:root{--bg:#f1eee5;--paper:#f1eee5;--ink:#39352f;--muted:#979082;--line:#d9d1c3;--accent:#a84425}
+body{background:var(--bg);color:#292621;font-family:Pretendard,sans-serif;font-weight:400;letter-spacing:-.02em;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit;border-radius:0}
+.site-layout{display:grid;grid-template-columns:minmax(0,73fr) minmax(0,27fr);align-items:start;min-height:100vh}
+.site-content{display:block;min-width:0;container-type:inline-size}
+.site-content .site-header{height:116px;padding:0 4.14%;gap:18px;display:flex;flex-wrap:nowrap;border:0;background:var(--bg)}
+.site-content .site-header .brand{gap:24px;flex-shrink:0}
+.site-content .site-header .brand img{width:162px;height:66.5px;max-height:none;object-fit:contain;mix-blend-mode:multiply}
+.site-content .brand .brand-context{display:flex;align-items:center;gap:0;white-space:nowrap;font-size:11px;font-weight:400;letter-spacing:-.1px;line-height:1.4;color:#918a7d}
+.brand-context i{font-style:normal;color:#b3aa9b;font-size:18px;letter-spacing:0}
+.header-nav{display:flex;align-items:center;gap:18px;margin-left:auto;white-space:nowrap}
+.header-nav a,.header-nav button,.site-content .admin-menu{font-size:12px;font-weight:400;letter-spacing:-.3px;color:#474239;text-decoration:none}
+.header-nav a,.header-nav button{border:0;padding:10px 0}
+.site-content .admin-menu{margin:0}
+.reference-page{margin:0 4.14%}
+.reference-meta{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#918a7d;margin-top:16px;letter-spacing:-.25px}
+.reference-title{font-family:Pretendard,sans-serif;font-size:77px;font-weight:700;letter-spacing:-2.24px;line-height:1.08;white-space:nowrap;margin:32px 0 30px}
+.reference-rule{border:0;border-top:1px solid #8e887b;margin:0 0 32px}
+.reference-editorial{display:grid;grid-template-columns:43.6fr 17.6fr 34.5fr;column-gap:2.15%;align-items:stretch}
+.reference-kitchen{align-self:start;width:100%;aspect-ratio:630/945;overflow:hidden;position:relative;margin:0}
+.reference-kitchen img{position:absolute;width:243.81%;height:auto;max-width:none;left:-7.143%;top:-40.741%}
+.reference-middle{display:flex;flex-direction:column;justify-content:space-between;width:100%;aspect-ratio:17.6/65.4;align-self:start;font-size:12px;color:#8b8478;letter-spacing:-.1px}
+.reference-middle small{display:block;margin-top:14px;font-size:11px}
+.reference-middle p{font-size:17px;line-height:1.65;color:#353027;margin:0;transform:translateY(.14em);letter-spacing:-.5px}
+.reference-story{min-width:0}
+.reference-story h2{font-size:23px;font-weight:400;letter-spacing:-.7px;line-height:1.5;margin:0 0 18px}
+.reference-story p{color:#979082;font-size:12px;letter-spacing:-.35px;line-height:1.85;margin:0 0 14px}
+.reference-link{display:flex;justify-content:space-between;align-items:center;text-decoration:none;font-size:17px;font-weight:600;letter-spacing:-.25px;color:#a84425;border-bottom:1px solid #d8d2c7;padding-bottom:14px;margin-bottom:24px}
+.reference-link span{font-size:26px;line-height:1;font-weight:400}
+.reference-chair{width:100%;display:block;aspect-ratio:500/750;object-fit:cover;object-position:center}
+.site-content .reference-workspace{display:block;padding:0 4.14% 40px;max-width:none;margin:0}
+.reference-explore{display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-top:1px solid #8e887b;border-bottom:1px solid #d8d2c7;margin-top:65px;padding:20px 0 28px;scroll-margin-top:24px}
+.reference-explore>strong{font-size:16px;font-weight:600;margin-right:15px}
+.reference-explore .groups{display:flex;flex:1;justify-content:space-between;gap:12px;border:0;overflow:visible}
+.reference-explore .groups button{font-size:14px;min-height:0;min-width:0;padding:10px 4px 16px;white-space:nowrap;font-weight:400}
+.reference-explore .groups .group-no{display:none}
+.reference-explore .groups button.active{color:#b84d2a}
+.reference-explore .groups button.active:after{height:1px;background:#d27a58}
+.reference-actions{display:flex;gap:26px;margin-left:auto;align-items:center}
+.reference-actions button{border:0;white-space:nowrap;font-size:12px;padding:0}
+.reference-actions .explore-export{background:#b94d29;color:white;padding:14px 24px}
+.library-tools{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:0 0 25px}
+.library-tools .filter-row{flex:1 1 100%}
+.library-tools .search{background:transparent;border-radius:0}
+.library-tools>select{border-radius:0;min-height:42px}
+.site-content .library{display:block;padding:0}
+.site-content .mobile-tabs{display:none}
+.catalog{gap:28px 18px}
+.material-image{border-radius:0}
+.material-image .fav.active{background:#eee2d6;color:var(--accent)}
+.material-image .add.added{background:#ded5c8}
+.site-content footer{padding:24px 4.14%;background:transparent}
+.consultation-rail{position:sticky;top:0;width:auto;height:100dvh;max-height:100dvh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;border-left:1px solid #d5cdbf;padding:44px 28px;background:var(--bg);color:#39352f;box-shadow:none;min-width:0}
+.consultation-head{margin-bottom:32px;gap:8px}
+.consultation-head .eyebrow{font-size:10px;color:#b57152;letter-spacing:.18em}
+.consultation-head h2{font-size:29px;font-weight:500;line-height:1.35;letter-spacing:-1px;margin:14px 0 12px}
+.consultation-head p{font-size:13px;color:#9a8b74;margin:0}
+.consultation-head .icon-btn{margin-top:64px;font-size:24px;color:#7d705d}
+.consultation-form>label,.consultation-grid>label,.consultation-extra label{font-size:12px;color:#8c8170;margin-bottom:22px;font-weight:400}
+.consultation-form input:not([type=hidden]),.consultation-form select,.consultation-form textarea{border:1px solid var(--line);border-radius:0;background:transparent;min-height:43px;padding:10px;font-size:13px;margin-top:7px;line-height:1.5}
+.consultation-form input::placeholder,.consultation-form textarea::placeholder{color:#b4a994;font-size:11px}
+.consultation-grid{gap:16px}
+.input-unit{position:relative}
+.input-unit input{padding-right:32px!important}
+.input-unit span{right:12px;top:14px;color:#9c907c;font-size:11px}
+.consultation-extra{margin:0 0 30px;color:#9a8872}
+.consultation-extra summary{list-style:none;cursor:pointer;font-size:11px;padding:0 0 5px}
+.consultation-extra[open] summary{margin-bottom:14px}
+.consultation-rail .selection{display:block;position:static;max-height:none;overflow:visible;border:0;border-top:1px solid #d4cdbf!important;margin:0;padding:24px 0!important;background:transparent}
+.selection-top .eyebrow{font-size:10px;letter-spacing:.18em;color:#b57152}
+.selection-customer{font-size:23px;font-weight:500;margin:14px 0 20px;letter-spacing:-.045em}
+.selection-top #newProjectBtn{font-size:10px;padding:0}
+.consultation-rail .project-select select{border:1px solid #cec6b6;min-height:43px;padding:10px;font-size:12px;letter-spacing:-.02em;background:transparent}
+.consultation-rail .project-meta{font-size:11px;color:#9a8e7a;line-height:1.8;margin:14px 0}
+.create-project-btn{width:100%;font-size:13px;min-height:46px;padding:14px;margin:10px 0 0;background:#39352f;border-color:#39352f}
+.board-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
+.board-actions button{border:1px solid #b9aa93;padding:11px 6px;font-size:12px;border-radius:0}
+.board-actions button:last-child{background:#39332b;color:#f8f2e7;border-color:#39332b}
+.consultation-rail .project-detail-link{font-size:11px;color:#ac6140;margin-top:12px;padding:0;text-align:left}
+.consultation-rail .selected-items{max-height:none;overflow:visible}
+.consultation-rail .selected-item input,.consultation-rail .selected-item select{background:transparent}
+.consultation-rail .export-btn{background:#39352f;border-color:#39352f}
+
+/* The reference renders a 1536px canvas then scales the whole composition.
+   Zoom gives that same geometry while keeping dialogs in the real viewport. */
+body .site-layout{width:var(--reference-canvas-width,1521px);zoom:var(--reference-scale,1);grid-template-columns:minmax(0,73fr) minmax(0,27fr);min-height:var(--reference-height,100dvh)}
+body .site-layout>.consultation-rail{display:block;position:sticky;right:auto;top:0;width:auto;height:var(--reference-height,100dvh);max-height:var(--reference-height,100dvh);padding:44px 28px;z-index:1}
+body.consultation-closed .site-layout{grid-template-columns:minmax(0,1fr)}
+body.consultation-closed .site-layout>.consultation-rail{display:none}
+body.consultation-closed .reference-title{font-size:112px}
+body.consultation-closed .reference-story h2{font-size:28px}
+body.consultation-closed .reference-story p{font-size:14px}
+body.consultation-closed .reference-middle p{font-size:21px}
+.site-content .site-header{gap:18px}
+.site-content .site-header .brand img{width:162px;height:66.5px;max-height:none}
+.site-content .site-header .admin-menu{margin-left:0}
+.site-content .header-nav{display:flex}
+.site-content .catalog{grid-template-columns:repeat(var(--catalog-columns,3),minmax(0,1fr))!important}
+.consultation-head{display:block;position:relative;margin-bottom:32px}
+.consultation-head .eyebrow{display:block;font-size:10px;line-height:normal;font-weight:400;margin-bottom:14px}
+.consultation-head h2{font-size:29px;line-height:1.35;margin:0 0 12px}
+.consultation-head p{font-size:13px;line-height:1.7}
+.consultation-head #closeConsultationBtn{display:block;position:absolute;right:0;bottom:0;margin:0;padding:0 0 8px 10px;line-height:1;font-size:24px}
+.consultation-form>label,.consultation-grid>label,.consultation-extra label{line-height:normal}
+.consultation-form input:not([type=hidden]),.consultation-form select{line-height:normal;min-height:43px;padding:10px}
+.consultation-grid{grid-template-columns:1fr 1fr;gap:16px}
+.consultation-extra{margin-bottom:10px}
+.consultation-extra summary{font-size:11px;line-height:normal}
+.consultation-storage-note{font-size:9px;line-height:1.8;color:#a1937e;margin:10px 0 0;text-align:center}
+.consultation-rail .selection{margin-top:30px}
+.consultation-rail .selection-customer{font-size:23px;font-weight:500;line-height:1.35;margin:9px 0}
+.consultation-rail .selection-top .eyebrow{line-height:normal;font-weight:400}
+.consultation-rail .project-select{margin:0;padding:10px 0}
+.consultation-rail .project-select select{font-size:13px;height:43px;line-height:normal;letter-spacing:-.02em}
+#editProjectBtn{display:none}
+.consultation-rail #newProjectBtn{display:block;margin-top:20px;padding:0;font-size:12px;color:var(--accent)}
+.consultation-rail .board-actions{grid-template-columns:1fr 1fr}
+@media print{body .site-layout{zoom:1;width:100%;display:block}body .site-layout>.consultation-rail{display:none!important}}
+
+/* Keep scrolling available without the visible bars or a reserved gutter. */
+html,body,.site-layout>.consultation-rail{scrollbar-width:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar,.site-layout>.consultation-rail::-webkit-scrollbar{display:none;width:0;height:0}
+body .site-layout>.consultation-rail{scrollbar-gutter:auto;overflow-anchor:none}
+.material-image .fav{display:grid;place-items:center;width:30px;height:30px;top:10px;right:10px;padding:0;border:1px solid #39352f18;border-radius:50%!important;background:#f1eee5e8;color:var(--accent);line-height:1;box-shadow:none}
+.material-image .fav svg{display:block;width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.material-image .fav.active{background:#f1eee5f5;color:var(--accent)}
+.material-image .fav.active svg{fill:currentColor}
+.material-image .fav:hover{background:#fff}
+
+/* Approved editorial concept: quiet header, shared photo baseline, compact consultation. */
+.site-content .site-header{height:86px;padding:0 4.25%}
+.site-content .site-header .brand{gap:32px}
+.site-content .site-header .brand img{width:126px;height:52px}
+.site-content .brand .brand-context{padding-left:24px;border-left:1px solid #b9b0a3;font-size:10px;letter-spacing:.65px;color:#514d46;min-height:28px}
+.header-nav{gap:28px}
+.header-nav a,.header-nav button,.site-content .admin-menu{font-size:14px;color:#292621}
+.reference-page{margin:0 3% 0 5.5%}
+.reference-title{font-size:62px;letter-spacing:-1.6px;font-weight:700;line-height:1.12;margin:34px 0 22px}
+.reference-rule{margin-bottom:38px}
+.reference-editorial{grid-template-columns:47fr 13fr 35fr;column-gap:2.5%;align-items:stretch;height:54.09cqw}
+.reference-kitchen{aspect-ratio:auto;align-self:stretch;height:100%;min-height:0}
+.reference-middle{aspect-ratio:auto;align-self:stretch;font-size:13px;padding-top:9px;border-right:1px solid #d0c8bb}
+.reference-middle small{font-size:11px;letter-spacing:.3px;margin-top:10px}
+.reference-middle p{display:none}
+.reference-story{display:flex;flex-direction:column;min-height:0;padding-top:5px}
+.reference-story h2{font-size:27px;font-weight:600;line-height:1.35;letter-spacing:-.9px;margin:0 0 20px}
+.reference-story p{font-size:15px;color:#817a70;line-height:1.5;letter-spacing:-.3px;margin:0 0 20px}
+.reference-link{justify-content:flex-start;gap:12px;font-size:18px;font-weight:500;border:0;padding:0;margin:0 0 30px}
+.reference-link span{font-size:23px}
+.reference-chair{flex:1;min-height:0;height:0;aspect-ratio:auto;object-fit:cover;object-position:center 65%;margin-top:auto}
+.site-content .reference-workspace{padding:0 4.25% 40px}
+.reference-explore{margin-top:34px;padding:0 0 18px;border:0;gap:18px}
+.reference-explore>strong{font-size:17px;font-weight:500;letter-spacing:2px;color:var(--accent);margin-right:16px}
+.reference-explore>strong:after{content:'';display:inline-block;width:42px;height:1px;background:#c5bdae;vertical-align:middle;margin-left:28px}
+.reference-explore .groups button{font-size:14px;color:#292621}
+.reference-actions{gap:14px}
+.reference-actions button{font-size:11px}
+.reference-actions .explore-export{padding:10px 12px;background:transparent;color:var(--accent);border:1px solid #cabdaf}
+body .site-layout>.consultation-rail{padding:88px 36px 36px}
+.consultation-head{margin-bottom:30px}
+.consultation-head .eyebrow{font-size:12px;color:var(--accent);letter-spacing:2px;margin-bottom:16px}
+.consultation-head h2{font-size:30px;font-weight:600;line-height:1.35;margin-bottom:16px}
+.consultation-head .consultation-intro{font-size:14px;color:#817a70;line-height:1.6}
+.consultation-head #consultationDate{font-size:10px;margin-top:8px}
+.consultation-head #closeConsultationBtn{top:-4px;bottom:auto;font-size:20px;padding:0;color:#938779}
+.consultation-form>label,.consultation-grid>label{font-size:13px;color:#49443c;margin-bottom:20px}
+.consultation-form input:not([type=hidden]),.consultation-form select{min-height:34px;height:34px;padding:7px 12px;margin-top:7px;font-size:13px}
+.consultation-form input::placeholder{font-size:12px;color:#9c9387}
+.consultation-extra summary{font-size:12px;color:#817a70}
+.consultation-storage-note{font-size:9px;text-align:left;margin-top:12px}
+.consultation-rail .selection{margin-top:24px;padding-top:24px!important}
+.consultation-rail .selection-top .eyebrow{font-size:12px;color:var(--accent);letter-spacing:2px}
+.consultation-rail .selection-customer{font-size:28px;font-weight:600;margin:10px 0 18px}
+.consultation-rail .project-select{padding:0}
+.consultation-rail .project-select select{height:34px;min-height:34px;font-size:12px}
+.consultation-rail .project-meta{font-size:10px;margin:8px 0 10px}
+.consultation-rail .selection-heading{margin-top:10px;padding-top:12px}
+.consultation-rail .selection-heading h2{font-size:12px;font-weight:400;color:#817a70}
+.consultation-rail .selected-main img{width:62px;height:62px;object-fit:cover}
+.consultation-rail .selected-main b{font-size:14px;font-weight:500}
+.consultation-rail .selected-main small{font-size:11px;color:#8b8174}
+.consultation-rail .selected-main .info>small:first-child{display:none}
+.selection-item-details{margin-top:8px}
+.selection-item-details summary{cursor:pointer;list-style:none;color:#94897b;font-size:11px;text-align:right}
+.selection-item-details summary:after{content:' +'}
+.selection-item-details[open] summary:after{content:' −'}
+.consultation-rail .create-project-btn{font-size:16px;min-height:50px;margin-top:26px;padding:14px 18px}
+.consultation-rail .board-actions button{font-size:11px;padding:9px 4px}
+body.consultation-closed .reference-title{font-size:72px}
+body.consultation-closed .reference-story h2{font-size:32px}
+body.consultation-closed .reference-story p{font-size:17px}
+
+.reference-kitchen img{top:0;margin-top:-61.111%}
+
+.reference-kitchen img{position:static;width:100%;height:100%;max-width:100%;margin:0;object-fit:cover;object-position:center}
+.concept-image-note{position:absolute;left:12px;bottom:10px;font-size:9px;letter-spacing:0;color:#fff;background:#29262160;padding:4px 6px}
+
+/* Give the full photographs room: no forced crop or empty index column. */
+.reference-editorial{grid-template-columns:minmax(0,61fr) minmax(0,35fr);column-gap:4%;height:auto;align-items:start}
+.reference-middle{display:none}
+.reference-kitchen{height:auto;aspect-ratio:auto;align-self:start;overflow:visible}
+.reference-kitchen img{display:block;width:100%;height:auto;object-fit:contain;object-position:center}
+.reference-story{padding-top:0;min-width:0}
+.reference-chair{display:block;flex:none;width:100%;height:auto;min-height:0;aspect-ratio:auto;object-fit:contain;object-position:center;margin-top:0}
+.reference-story h2{font-size:25px;margin-bottom:16px}
+.reference-story p{font-size:14px;margin-bottom:18px}
+.reference-link{margin-bottom:26px}
+
+/* Align photo baselines while retaining each original aspect ratio. */
+.reference-editorial{align-items:stretch}
+.reference-story{align-self:stretch}
+.reference-chair{margin-top:auto}
+
+/* Start consultation at the detail photograph; keep sticky form usable on scroll. */
+body .site-layout>.consultation-rail{margin-top:0;padding-top:36px}
+
+/* Consultation workspace: one persistent entry point and one project workspace. */
+.workspace-bar{position:sticky;top:0;z-index:80;display:flex;align-items:center;gap:18px;padding:12px 4.14%;background:#F1EEE5;border-bottom:1px solid #D9D1C3;color:#292621;font-family:Pretendard,sans-serif}
+.workspace-bar button{flex-shrink:0;font-size:14px;min-height:42px}.workspace-bar .current-project{display:flex;align-items:center;gap:12px;min-width:0;flex:1;border:0;background:transparent;text-align:left}.current-project strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:32vw}.current-project span{color:#71695e;font-size:12px;white-space:nowrap}.workspace-bar #saveState{font-size:12px;color:#71695e;max-width:260px}.workspace-bar .dark,.list-new-project{background:#A84425;color:white;border-color:#A84425}.workspace-bar .dark:hover,.list-new-project:hover{background:#8d381e}
+.project-select[hidden],#newProjectBtn[hidden],#createProjectBtn[hidden]{display:none!important}.list-new-project{margin-bottom:16px}.project-row-menu{position:relative;align-self:center}.project-row-menu summary{list-style:none;cursor:pointer;font-size:24px;padding:8px 14px;border:1px solid #D9D1C3}.project-row-menu summary::-webkit-details-marker{display:none}.project-row-menu>div{position:absolute;right:0;top:100%;z-index:3;min-width:160px;background:#fff;border:1px solid #D9D1C3;padding:8px}.project-row-menu .project-delete-btn{width:100%;color:#A84425}.saved-project-entry{overflow:visible}.auto-save-note,.project-save-status{font-size:12px;color:#71695e}.project-save-status{display:block;margin:6px 0 14px}#projectInlineEditor{scroll-margin-top:20px;border-top:1px solid #D9D1C3;padding-top:24px;margin-top:24px}#projectInlineEditor[hidden]{display:none}#projectInlineEditor h2{font-size:20px}#projectInlineEditor .project-editor-actions{display:none}#projectInfoEditor{padding:16px;background:#F1EEE5;margin-bottom:20px}#projectInfoEditor[hidden]{display:none}.project-detail-dialog{width:min(1020px,94vw)}.project-detail-actions{position:sticky;bottom:-1px;background:#fff;border-top:1px solid #D9D1C3;padding-top:16px;z-index:2}.picker-filters{display:grid;grid-template-columns:1fr 1fr;gap:12px}.picker-filters label{display:grid;gap:6px;font-size:12px}.project-material-picker-dialog{width:min(1050px,94vw)}#projectMaterialPickerItems{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.project-material-choice{display:flex;flex-direction:column;align-items:stretch;text-align:left;gap:12px;padding:12px;min-width:0}.project-material-choice img{width:100%;height:190px;object-fit:contain;background:#F1EEE5}.project-material-choice span{min-width:0}.project-material-choice strong{font-size:14px;line-height:1.45}.project-material-choice small{display:block;font-size:12px;margin-top:6px}.project-material-choice:disabled{opacity:.5}body .site-layout>.consultation-rail{top:68px;max-height:calc(100dvh - 68px)}
+@media(max-width:900px){.workspace-bar{gap:8px;padding:10px 16px;flex-wrap:wrap}.workspace-bar button{font-size:12px;padding:8px 10px}.workspace-bar .current-project{gap:6px}.workspace-bar #saveState{order:4;width:100%;max-width:none;font-size:11px}.current-project strong{max-width:30vw}.current-project span{font-size:11px}#projectMaterialPickerItems{grid-template-columns:repeat(2,minmax(0,1fr))}.project-material-choice img{height:150px}}
+@media(max-width:480px){.workspace-bar{gap:6px}.workspace-bar .current-project{flex-direction:column;align-items:flex-start;gap:2px}.current-project strong{max-width:34vw}#projectMaterialPickerItems{gap:8px}.project-material-choice{padding:8px}.project-material-choice img{height:120px}}
+
+.project-detail-dialog.editing-materials .project-detail-materials{display:none}.project-detail-dialog.editing-materials #projectDetailContent>.project-materials-heading:last-of-type{display:none}
+
+/* Equal consultation action sizes; export formats stay within the dialog. */
+.consultation-rail #createProjectBtn,.consultation-rail #finishListBtn{width:100%;min-height:50px;padding:14px 18px;font-size:16px;line-height:1.35;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;box-sizing:border-box}
+.consultation-rail #createProjectBtn{margin-top:26px}.consultation-rail #finishListBtn{margin:0}.consultation-rail .export-summary span{font-size:13px}.consultation-rail .export-summary small{font-size:11px;margin-top:5px}.finish-list-actions{display:flex;flex-wrap:wrap}.finish-list-actions label{flex:1;min-width:0}.finish-list-actions select{width:100%;min-width:0}.finish-list-actions #materialDownloadBtn{min-height:44px;max-width:100%}
+
+/* Keep the consultation heading and its original top breathing room in place. */
+body .site-layout>.consultation-rail{display:flex;flex-direction:column;overflow:hidden;top:calc(var(--workspace-bar-height,68px) / var(--reference-scale,1));height:calc(var(--reference-height,100dvh) - var(--workspace-bar-height,68px) / var(--reference-scale,1));max-height:calc(var(--reference-height,100dvh) - var(--workspace-bar-height,68px) / var(--reference-scale,1));padding-top:36px;padding-bottom:0}
+body.consultation-closed .site-layout>.consultation-rail{display:none}
+.consultation-rail>.consultation-head{flex:0 0 auto;margin-bottom:32px}
+.consultation-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;padding-bottom:36px;overflow-anchor:none}
+.consultation-scroll::-webkit-scrollbar{display:none;width:0;height:0}
+@media print{body .site-layout>.consultation-rail{display:none!important}}
+
+/* 2026-11-10 벽지·마루 브랜드/시리즈 필터 */
+.brand-chips{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:0 0 16px;margin-top:-6px}
+.brand-chips[hidden]{display:none}
+.brand-chips .chip-label{font-size:10px;letter-spacing:.14em;opacity:.55;margin-right:8px}
+.brand-chips button{padding:6px 11px;font-size:11px;border-radius:0;background:transparent;border:1px solid rgba(0,0,0,.14);color:inherit;cursor:pointer}
+.brand-chips button:hover{border-color:var(--ink)}
+.brand-chips button.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.brand-chips .chip-count{margin-left:6px;opacity:.55;font-size:10px}
+.brand-chips button.active .chip-count{opacity:.8}
+.series-chips{margin-top:-10px;margin-left:4px;padding-left:14px;border-left:1px solid rgba(0,0,0,.14)}
+.series-chips button{font-size:10.5px;padding:5px 10px}
