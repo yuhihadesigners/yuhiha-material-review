@@ -1,0 +1,511 @@
+/* Extend the wall of the approved Younglim door elevations to the catalog card edges. */
+.material-image:is([data-detail="yuhiha-userpng-d705eab8830f85384b98"], [data-detail="yuhiha-door-d10be07a450038a77ce1"], [data-detail="yuhiha-door-5a1689059303c8093c6d"], [data-detail="yuhiha-door-6146640d90fe76c68966"], [data-detail="yuhiha-door-64657ad0b6ef16f9d803"], [data-detail="yuhiha-door-2d64c2232e18c10e5613"]) {
+  &::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, transparent, rgb(0 0 0 / 1.4%)), linear-gradient(to right, #e7e6e5 15%, #e2e1df 85%); }
+  & > img { width: auto !important; height: 101.28205% !important; max-width: none !important; inset: 50% auto auto 50% !important; transform: translate(-50%, -50%); background-color: inherit; clip-path: inset(0.63291% 0.68966%); }
+}
+/* Layout and photograph crops from Seoyeon's published editorial-canvas.
+   https://yuhiha-layout-preview-1106.totalmockingbird.chatgpt.site/
+   Keep production controls/storage; match the reference 73 / 27 split and 1536px scaled canvas. */
+:root{--bg:#f1eee5;--paper:#f1eee5;--ink:#39352f;--muted:#979082;--line:#d9d1c3;--accent:#a84425}
+body{background:var(--bg);color:#292621;font-family:Pretendard,sans-serif;font-weight:400;letter-spacing:-.02em;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit;border-radius:0}
+.site-layout{display:grid;grid-template-columns:minmax(0,73fr) minmax(0,27fr);align-items:start;min-height:100vh}
+.site-content{display:block;min-width:0;container-type:inline-size}
+.site-content .site-header{height:116px;padding:0 4.14%;gap:18px;display:flex;flex-wrap:nowrap;border:0;background:var(--bg)}
+.site-content .site-header .brand{gap:24px;flex-shrink:0}
+.site-content .site-header .brand img{width:162px;height:66.5px;max-height:none;object-fit:contain;mix-blend-mode:multiply}
+.site-content .brand .brand-context{display:flex;align-items:center;gap:0;white-space:nowrap;font-size:11px;font-weight:400;letter-spacing:-.1px;line-height:1.4;color:#918a7d}
+.brand-context i{font-style:normal;color:#b3aa9b;font-size:18px;letter-spacing:0}
+.header-nav{display:flex;align-items:center;gap:18px;margin-left:auto;white-space:nowrap}
+.header-nav a,.header-nav button,.site-content .admin-menu{font-size:12px;font-weight:400;letter-spacing:-.3px;color:#474239;text-decoration:none}
+.header-nav a,.header-nav button{border:0;padding:10px 0}
+.site-content .admin-menu{margin:0}
+.reference-page{margin:0 4.14%}
+.reference-meta{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#918a7d;margin-top:16px;letter-spacing:-.25px}
+.reference-title{font-family:Pretendard,sans-serif;font-size:77px;font-weight:700;letter-spacing:-2.24px;line-height:1.08;white-space:nowrap;margin:32px 0 30px}
+.reference-rule{border:0;border-top:1px solid #8e887b;margin:0 0 32px}
+.reference-editorial{display:grid;grid-template-columns:43.6fr 17.6fr 34.5fr;column-gap:2.15%;align-items:stretch}
+.reference-kitchen{align-self:start;width:100%;aspect-ratio:630/945;overflow:hidden;position:relative;margin:0}
+.reference-kitchen img{position:absolute;width:243.81%;height:auto;max-width:none;left:-7.143%;top:-40.741%}
+.reference-middle{display:flex;flex-direction:column;justify-content:space-between;width:100%;aspect-ratio:17.6/65.4;align-self:start;font-size:12px;color:#8b8478;letter-spacing:-.1px}
+.reference-middle small{display:block;margin-top:14px;font-size:11px}
+.reference-middle p{font-size:17px;line-height:1.65;color:#353027;margin:0;transform:translateY(.14em);letter-spacing:-.5px}
+.reference-story{min-width:0}
+.reference-story h2{font-size:23px;font-weight:400;letter-spacing:-.7px;line-height:1.5;margin:0 0 18px}
+.reference-story p{color:#979082;font-size:12px;letter-spacing:-.35px;line-height:1.85;margin:0 0 14px}
+.reference-link{display:flex;justify-content:space-between;align-items:center;text-decoration:none;font-size:17px;font-weight:600;letter-spacing:-.25px;color:#a84425;border-bottom:1px solid #d8d2c7;padding-bottom:14px;margin-bottom:24px}
+.reference-link span{font-size:26px;line-height:1;font-weight:400}
+.reference-chair{width:100%;display:block;aspect-ratio:500/750;object-fit:cover;object-position:center}
+.site-content .reference-workspace{display:block;padding:0 4.14% 40px;max-width:none;margin:0}
+.reference-explore{display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-top:1px solid #8e887b;border-bottom:1px solid #d8d2c7;margin-top:65px;padding:20px 0 28px;scroll-margin-top:24px}
+.reference-explore>strong{font-size:16px;font-weight:600;margin-right:15px}
+.reference-explore .groups{display:flex;flex:1;justify-content:space-between;gap:12px;border:0;overflow:visible}
+.reference-explore .groups button{font-size:14px;min-height:0;min-width:0;padding:10px 4px 16px;white-space:nowrap;font-weight:400}
+.reference-explore .groups .group-no{display:none}
+.reference-explore .groups button.active{color:#b84d2a}
+.reference-explore .groups button.active:after{height:1px;background:#d27a58}
+.reference-actions{display:flex;gap:26px;margin-left:auto;align-items:center}
+.reference-actions button{border:0;white-space:nowrap;font-size:12px;padding:0}
+.reference-actions .explore-export{background:#b94d29;color:white;padding:14px 24px}
+.library-tools{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:0 0 25px}
+.library-tools .filter-row{flex:1 1 100%}
+.library-tools .search{background:transparent;border-radius:0}
+.library-tools>select{border-radius:0;min-height:42px}
+.site-content .library{display:block;padding:0}
+.site-content .mobile-tabs{display:none}
+.catalog{gap:28px 18px}
+.material-image{border-radius:0}
+.material-image .fav.active{background:#eee2d6;color:var(--accent)}
+.material-image .add.added{background:#ded5c8}
+.site-content footer{padding:24px 4.14%;background:transparent}
+.consultation-rail{position:sticky;top:0;width:auto;height:100dvh;max-height:100dvh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;border-left:1px solid #d5cdbf;padding:44px 28px;background:var(--bg);color:#39352f;box-shadow:none;min-width:0}
+.consultation-head{margin-bottom:32px;gap:8px}
+.consultation-head .eyebrow{font-size:10px;color:#b57152;letter-spacing:.18em}
+.consultation-head h2{font-size:29px;font-weight:500;line-height:1.35;letter-spacing:-1px;margin:14px 0 12px}
+.consultation-head p{font-size:13px;color:#9a8b74;margin:0}
+.consultation-head .icon-btn{margin-top:64px;font-size:24px;color:#7d705d}
+.consultation-form>label,.consultation-grid>label,.consultation-extra label{font-size:12px;color:#8c8170;margin-bottom:22px;font-weight:400}
+.consultation-form input:not([type=hidden]),.consultation-form select,.consultation-form textarea{border:1px solid var(--line);border-radius:0;background:transparent;min-height:43px;padding:10px;font-size:13px;margin-top:7px;line-height:1.5}
+.consultation-form input::placeholder,.consultation-form textarea::placeholder{color:#b4a994;font-size:11px}
+.consultation-grid{gap:16px}
+.input-unit{position:relative}
+.input-unit input{padding-right:32px!important}
+.input-unit span{right:12px;top:14px;color:#9c907c;font-size:11px}
+.consultation-extra{margin:0 0 30px;color:#9a8872}
+.consultation-extra summary{list-style:none;cursor:pointer;font-size:11px;padding:0 0 5px}
+.consultation-extra[open] summary{margin-bottom:14px}
+.consultation-rail .selection{display:block;position:static;max-height:none;overflow:visible;border:0;border-top:1px solid #d4cdbf!important;margin:0;padding:24px 0!important;background:transparent}
+.selection-top .eyebrow{font-size:10px;letter-spacing:.18em;color:#b57152}
+.selection-customer{font-size:23px;font-weight:500;margin:14px 0 20px;letter-spacing:-.045em}
+.selection-top #newProjectBtn{font-size:10px;padding:0}
+.consultation-rail .project-select select{border:1px solid #cec6b6;min-height:43px;padding:10px;font-size:12px;letter-spacing:-.02em;background:transparent}
+.consultation-rail .project-meta{font-size:11px;color:#9a8e7a;line-height:1.8;margin:14px 0}
+.create-project-btn{width:100%;font-size:13px;min-height:46px;padding:14px;margin:10px 0 0;background:#39352f;border-color:#39352f}
+.board-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
+.board-actions button{border:1px solid #b9aa93;padding:11px 6px;font-size:12px;border-radius:0}
+.board-actions button:last-child{background:#39332b;color:#f8f2e7;border-color:#39332b}
+.consultation-rail .project-detail-link{font-size:11px;color:#ac6140;margin-top:12px;padding:0;text-align:left}
+.consultation-rail .selected-items{max-height:none;overflow:visible}
+.consultation-rail .selected-item input,.consultation-rail .selected-item select{background:transparent}
+.consultation-rail .export-btn{background:#39352f;border-color:#39352f}
+
+/* The reference renders a 1536px canvas then scales the whole composition.
+   Zoom gives that same geometry while keeping dialogs in the real viewport. */
+body .site-layout{width:var(--reference-canvas-width,1521px);zoom:var(--reference-scale,1);grid-template-columns:minmax(0,73fr) minmax(0,27fr);min-height:var(--reference-height,100dvh)}
+body .site-layout>.consultation-rail{display:block;position:sticky;right:auto;top:0;width:auto;height:var(--reference-height,100dvh);max-height:var(--reference-height,100dvh);padding:44px 28px;z-index:1}
+body.consultation-closed .site-layout{grid-template-columns:minmax(0,1fr)}
+body.consultation-closed .site-layout>.consultation-rail{display:none}
+body.consultation-closed .reference-title{font-size:112px}
+body.consultation-closed .reference-story h2{font-size:28px}
+body.consultation-closed .reference-story p{font-size:14px}
+body.consultation-closed .reference-middle p{font-size:21px}
+.site-content .site-header{gap:18px}
+.site-content .site-header .brand img{width:162px;height:66.5px;max-height:none}
+.site-content .site-header .admin-menu{margin-left:0}
+.site-content .header-nav{display:flex}
+.site-content .catalog{grid-template-columns:repeat(var(--catalog-columns,3),minmax(0,1fr))!important}
+.consultation-head{display:block;position:relative;margin-bottom:32px}
+.consultation-head .eyebrow{display:block;font-size:10px;line-height:normal;font-weight:400;margin-bottom:14px}
+.consultation-head h2{font-size:29px;line-height:1.35;margin:0 0 12px}
+.consultation-head p{font-size:13px;line-height:1.7}
+.consultation-head #closeConsultationBtn{display:block;position:absolute;right:0;bottom:0;margin:0;padding:0 0 8px 10px;line-height:1;font-size:24px}
+.consultation-form>label,.consultation-grid>label,.consultation-extra label{line-height:normal}
+.consultation-form input:not([type=hidden]),.consultation-form select{line-height:normal;min-height:43px;padding:10px}
+.consultation-grid{grid-template-columns:1fr 1fr;gap:16px}
+.consultation-extra{margin-bottom:10px}
+.consultation-extra summary{font-size:11px;line-height:normal}
+.consultation-storage-note{font-size:9px;line-height:1.8;color:#a1937e;margin:10px 0 0;text-align:center}
+.consultation-rail .selection{margin-top:30px}
+.consultation-rail .selection-customer{font-size:23px;font-weight:500;line-height:1.35;margin:9px 0}
+.consultation-rail .selection-top .eyebrow{line-height:normal;font-weight:400}
+.consultation-rail .project-select{margin:0;padding:10px 0}
+.consultation-rail .project-select select{font-size:13px;height:43px;line-height:normal;letter-spacing:-.02em}
+#editProjectBtn{display:none}
+.consultation-rail #newProjectBtn{display:block;margin-top:20px;padding:0;font-size:12px;color:var(--accent)}
+.consultation-rail .board-actions{grid-template-columns:1fr 1fr}
+@media print{body .site-layout{zoom:1;width:100%;display:block}body .site-layout>.consultation-rail{display:none!important}}
+
+/* Keep scrolling available without the visible bars or a reserved gutter. */
+html,body,.site-layout>.consultation-rail{scrollbar-width:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar,.site-layout>.consultation-rail::-webkit-scrollbar{display:none;width:0;height:0}
+body .site-layout>.consultation-rail{scrollbar-gutter:auto;overflow-anchor:none}
+.material-image .fav{display:grid;place-items:center;width:30px;height:30px;top:10px;right:10px;padding:0;border:1px solid #39352f18;border-radius:50%!important;background:#f1eee5e8;color:var(--accent);line-height:1;box-shadow:none}
+.material-image .fav svg{display:block;width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.material-image .fav.active{background:#f1eee5f5;color:var(--accent)}
+.material-image .fav.active svg{fill:currentColor}
+.material-image .fav:hover{background:#fff}
+
+/* Approved editorial concept: quiet header, shared photo baseline, compact consultation. */
+.site-content .site-header{height:86px;padding:0 4.25%}
+.site-content .site-header .brand{gap:32px}
+.site-content .site-header .brand img{width:126px;height:52px}
+.site-content .brand .brand-context{padding-left:24px;border-left:1px solid #b9b0a3;font-size:10px;letter-spacing:.65px;color:#514d46;min-height:28px}
+.header-nav{gap:28px}
+.header-nav a,.header-nav button,.site-content .admin-menu{font-size:14px;color:#292621}
+.reference-page{margin:0 3% 0 5.5%}
+.reference-title{font-size:62px;letter-spacing:-1.6px;font-weight:700;line-height:1.12;margin:34px 0 22px}
+.reference-rule{margin-bottom:38px}
+.reference-editorial{grid-template-columns:47fr 13fr 35fr;column-gap:2.5%;align-items:stretch;height:54.09cqw}
+.reference-kitchen{aspect-ratio:auto;align-self:stretch;height:100%;min-height:0}
+.reference-middle{aspect-ratio:auto;align-self:stretch;font-size:13px;padding-top:9px;border-right:1px solid #d0c8bb}
+.reference-middle small{font-size:11px;letter-spacing:.3px;margin-top:10px}
+.reference-middle p{display:none}
+.reference-story{display:flex;flex-direction:column;min-height:0;padding-top:5px}
+.reference-story h2{font-size:27px;font-weight:600;line-height:1.35;letter-spacing:-.9px;margin:0 0 20px}
+.reference-story p{font-size:15px;color:#817a70;line-height:1.5;letter-spacing:-.3px;margin:0 0 20px}
+.reference-link{justify-content:flex-start;gap:12px;font-size:18px;font-weight:500;border:0;padding:0;margin:0 0 30px}
+.reference-link span{font-size:23px}
+.reference-chair{flex:1;min-height:0;height:0;aspect-ratio:auto;object-fit:cover;object-position:center 65%;margin-top:auto}
+.site-content .reference-workspace{padding:0 4.25% 40px}
+.reference-explore{margin-top:34px;padding:0 0 18px;border:0;gap:18px}
+.reference-explore>strong{font-size:17px;font-weight:500;letter-spacing:2px;color:var(--accent);margin-right:16px}
+.reference-explore>strong:after{content:'';display:inline-block;width:42px;height:1px;background:#c5bdae;vertical-align:middle;margin-left:28px}
+.reference-explore .groups button{font-size:14px;color:#292621}
+.reference-actions{gap:14px}
+.reference-actions button{font-size:11px}
+.reference-actions .explore-export{padding:10px 12px;background:transparent;color:var(--accent);border:1px solid #cabdaf}
+body .site-layout>.consultation-rail{padding:88px 36px 36px}
+.consultation-head{margin-bottom:30px}
+.consultation-head .eyebrow{font-size:12px;color:var(--accent);letter-spacing:2px;margin-bottom:16px}
+.consultation-head h2{font-size:30px;font-weight:600;line-height:1.35;margin-bottom:16px}
+.consultation-head .consultation-intro{font-size:14px;color:#817a70;line-height:1.6}
+.consultation-head #consultationDate{font-size:10px;margin-top:8px}
+.consultation-head #closeConsultationBtn{top:-4px;bottom:auto;font-size:20px;padding:0;color:#938779}
+.consultation-form>label,.consultation-grid>label{font-size:13px;color:#49443c;margin-bottom:20px}
+.consultation-form input:not([type=hidden]),.consultation-form select{min-height:34px;height:34px;padding:7px 12px;margin-top:7px;font-size:13px}
+.consultation-form input::placeholder{font-size:12px;color:#9c9387}
+.consultation-extra summary{font-size:12px;color:#817a70}
+.consultation-storage-note{font-size:9px;text-align:left;margin-top:12px}
+.consultation-rail .selection{margin-top:24px;padding-top:24px!important}
+.consultation-rail .selection-top .eyebrow{font-size:12px;color:var(--accent);letter-spacing:2px}
+.consultation-rail .selection-customer{font-size:28px;font-weight:600;margin:10px 0 18px}
+.consultation-rail .project-select{padding:0}
+.consultation-rail .project-select select{height:34px;min-height:34px;font-size:12px}
+.consultation-rail .project-meta{font-size:10px;margin:8px 0 10px}
+.consultation-rail .selection-heading{margin-top:10px;padding-top:12px}
+.consultation-rail .selection-heading h2{font-size:12px;font-weight:400;color:#817a70}
+.consultation-rail .selected-main img{width:62px;height:62px;object-fit:cover}
+.consultation-rail .selected-main b{font-size:14px;font-weight:500}
+.consultation-rail .selected-main small{font-size:11px;color:#8b8174}
+.consultation-rail .selected-main .info>small:first-child{display:none}
+.selection-item-details{margin-top:8px}
+.selection-item-details summary{cursor:pointer;list-style:none;color:#94897b;font-size:11px;text-align:right}
+.selection-item-details summary:after{content:' +'}
+.selection-item-details[open] summary:after{content:' −'}
+.consultation-rail .create-project-btn{font-size:16px;min-height:50px;margin-top:26px;padding:14px 18px}
+.consultation-rail .board-actions button{font-size:11px;padding:9px 4px}
+body.consultation-closed .reference-title{font-size:72px}
+body.consultation-closed .reference-story h2{font-size:32px}
+body.consultation-closed .reference-story p{font-size:17px}
+
+.reference-kitchen img{top:0;margin-top:-61.111%}
+
+.reference-kitchen img{position:static;width:100%;height:100%;max-width:100%;margin:0;object-fit:cover;object-position:center}
+.concept-image-note{position:absolute;left:12px;bottom:10px;font-size:9px;letter-spacing:0;color:#fff;background:#29262160;padding:4px 6px}
+
+/* Give the full photographs room: no forced crop or empty index column. */
+.reference-editorial{grid-template-columns:minmax(0,61fr) minmax(0,35fr);column-gap:4%;height:auto;align-items:start}
+.reference-middle{display:none}
+.reference-kitchen{height:auto;aspect-ratio:auto;align-self:start;overflow:visible}
+.reference-kitchen img{display:block;width:100%;height:auto;object-fit:contain;object-position:center}
+.reference-story{padding-top:0;min-width:0}
+.reference-chair{display:block;flex:none;width:100%;height:auto;min-height:0;aspect-ratio:auto;object-fit:contain;object-position:center;margin-top:0}
+.reference-story h2{font-size:25px;margin-bottom:16px}
+.reference-story p{font-size:14px;margin-bottom:18px}
+.reference-link{margin-bottom:26px}
+
+/* Align photo baselines while retaining each original aspect ratio. */
+.reference-editorial{align-items:stretch}
+.reference-story{align-self:stretch}
+.reference-chair{margin-top:auto}
+
+/* Start consultation at the detail photograph; keep sticky form usable on scroll. */
+body .site-layout>.consultation-rail{margin-top:0;padding-top:36px}
+
+/* Consultation workspace: one persistent entry point and one project workspace. */
+.workspace-bar{position:sticky;top:0;z-index:80;display:flex;align-items:center;gap:18px;padding:12px 4.14%;background:#F1EEE5;border-bottom:1px solid #D9D1C3;color:#292621;font-family:Pretendard,sans-serif}
+.workspace-bar button{flex-shrink:0;font-size:14px;min-height:42px}.workspace-bar .current-project{display:flex;align-items:center;gap:12px;min-width:0;flex:1;border:0;background:transparent;text-align:left}.current-project strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:32vw}.current-project span{color:#71695e;font-size:12px;white-space:nowrap}.workspace-bar #saveState{font-size:12px;color:#71695e;max-width:260px}.workspace-bar .dark,.list-new-project{background:#A84425;color:white;border-color:#A84425}.workspace-bar .dark:hover,.list-new-project:hover{background:#8d381e}
+.project-select[hidden],#newProjectBtn[hidden],#createProjectBtn[hidden]{display:none!important}.list-new-project{margin-bottom:16px}.project-row-menu{position:relative;align-self:center}.project-row-menu summary{list-style:none;cursor:pointer;font-size:24px;padding:8px 14px;border:1px solid #D9D1C3}.project-row-menu summary::-webkit-details-marker{display:none}.project-row-menu>div{position:absolute;right:0;top:100%;z-index:3;min-width:160px;background:#fff;border:1px solid #D9D1C3;padding:8px}.project-row-menu .project-delete-btn{width:100%;color:#A84425}.saved-project-entry{overflow:visible}.auto-save-note,.project-save-status{font-size:12px;color:#71695e}.project-save-status{display:block;margin:6px 0 14px}#projectInlineEditor{scroll-margin-top:20px;border-top:1px solid #D9D1C3;padding-top:24px;margin-top:24px}#projectInlineEditor[hidden]{display:none}#projectInlineEditor h2{font-size:20px}#projectInlineEditor .project-editor-actions{display:none}#projectInfoEditor{padding:16px;background:#F1EEE5;margin-bottom:20px}#projectInfoEditor[hidden]{display:none}.project-detail-dialog{width:min(1020px,94vw)}.project-detail-actions{position:sticky;bottom:-1px;background:#fff;border-top:1px solid #D9D1C3;padding-top:16px;z-index:2}.picker-filters{display:grid;grid-template-columns:1fr 1fr;gap:12px}.picker-filters label{display:grid;gap:6px;font-size:12px}.project-material-picker-dialog{width:min(1050px,94vw)}#projectMaterialPickerItems{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.project-material-choice{display:flex;flex-direction:column;align-items:stretch;text-align:left;gap:12px;padding:12px;min-width:0}.project-material-choice img{width:100%;height:190px;object-fit:contain;background:#F1EEE5}.project-material-choice span{min-width:0}.project-material-choice strong{font-size:14px;line-height:1.45}.project-material-choice small{display:block;font-size:12px;margin-top:6px}.project-material-choice:disabled{opacity:.5}body .site-layout>.consultation-rail{top:68px;max-height:calc(100dvh - 68px)}
+@media(max-width:900px){.workspace-bar{gap:8px;padding:10px 16px;flex-wrap:wrap}.workspace-bar button{font-size:12px;padding:8px 10px}.workspace-bar .current-project{gap:6px}.workspace-bar #saveState{order:4;width:100%;max-width:none;font-size:11px}.current-project strong{max-width:30vw}.current-project span{font-size:11px}#projectMaterialPickerItems{grid-template-columns:repeat(2,minmax(0,1fr))}.project-material-choice img{height:150px}}
+@media(max-width:480px){.workspace-bar{gap:6px}.workspace-bar .current-project{flex-direction:column;align-items:flex-start;gap:2px}.current-project strong{max-width:34vw}#projectMaterialPickerItems{gap:8px}.project-material-choice{padding:8px}.project-material-choice img{height:120px}}
+
+.project-detail-dialog.editing-materials .project-detail-materials{display:none}.project-detail-dialog.editing-materials #projectDetailContent>.project-materials-heading:last-of-type{display:none}
+
+/* Equal consultation action sizes; export formats stay within the dialog. */
+.consultation-rail #createProjectBtn,.consultation-rail #finishListBtn{width:100%;min-height:50px;padding:14px 18px;font-size:16px;line-height:1.35;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;box-sizing:border-box}
+.consultation-rail #createProjectBtn{margin-top:26px}.consultation-rail #finishListBtn{margin:0}.consultation-rail .export-summary span{font-size:13px}.consultation-rail .export-summary small{font-size:11px;margin-top:5px}.finish-list-actions{display:flex;flex-wrap:wrap}.finish-list-actions label{flex:1;min-width:0}.finish-list-actions select{width:100%;min-width:0}.finish-list-actions #materialDownloadBtn{min-height:44px;max-width:100%}
+
+/* Keep the consultation heading and its original top breathing room in place. */
+body .site-layout>.consultation-rail{display:flex;flex-direction:column;overflow:hidden;top:calc(var(--workspace-bar-height,68px) / var(--reference-scale,1));height:calc(var(--reference-height,100dvh) - var(--workspace-bar-height,68px) / var(--reference-scale,1));max-height:calc(var(--reference-height,100dvh) - var(--workspace-bar-height,68px) / var(--reference-scale,1));padding-top:36px;padding-bottom:0}
+body.consultation-closed .site-layout>.consultation-rail{display:none}
+.consultation-rail>.consultation-head{flex:0 0 auto;margin-bottom:32px}
+.consultation-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;padding-bottom:36px;overflow-anchor:none}
+.consultation-scroll::-webkit-scrollbar{display:none;width:0;height:0}
+@media print{body .site-layout>.consultation-rail{display:none!important}}
+
+/* 2026-11-10 벽지·마루 브랜드/시리즈 필터 */
+.brand-chips{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:0 0 16px;margin-top:-6px}
+.brand-chips[hidden]{display:none}
+.brand-chips .chip-label{font-size:10px;letter-spacing:.14em;opacity:.55;margin-right:8px}
+.brand-chips button{padding:6px 11px;font-size:11px;border-radius:0;background:transparent;border:1px solid rgba(0,0,0,.14);color:inherit;cursor:pointer}
+.brand-chips button:hover{border-color:var(--ink)}
+.brand-chips button.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.brand-chips .chip-count{margin-left:6px;opacity:.55;font-size:10px}
+.brand-chips button.active .chip-count{opacity:.8}
+.series-chips{margin-top:-10px;margin-left:4px;padding-left:14px;border-left:1px solid rgba(0,0,0,.14)}
+.series-chips button{font-size:10.5px;padding:5px 10px}
+
+/* Universal brand selector, before catalog search. */
+.library-tools #brandFilter{flex:0 1 180px;width:180px;max-width:40%;min-width:110px;padding:0 30px 0 12px;font:inherit;font-size:12px;background-color:transparent}
+.library-tools #catalogFilter[hidden]{display:none}
+.library-tools .search{flex:1 1 0;min-width:0}
+@media(max-width:600px){.library-tools #brandFilter{flex-basis:140px;width:140px;padding-left:8px;font-size:11px}.library-tools .search input{min-width:0;width:100%}}
+/* 프로젝트 상세 창(2026-11-23 사용자): 아래로 내려도 위쪽 제목줄과 × 닫기가 항상 보이게 */
+.project-detail-dialog .dialog-head{position:sticky;top:-28px;z-index:4;margin:-28px -28px 16px;padding:22px 28px 14px;background:#fbfaf7;border-bottom:1px solid #E7E1D6}
+@media(max-width:760px){.project-detail-dialog .dialog-head{top:-20px;margin:-20px -20px 14px;padding:16px 20px 12px}}
+/* 프로젝트 상세 창: 마감재 내보내기 아래 제안서 만들기(2026-11-23) */
+.project-detail-actions .detail-export-col{display:flex;flex-direction:column;align-items:stretch;gap:8px;min-width:250px}
+.project-detail-actions{align-items:flex-end}
+/* 상세 창 아래 버튼(2026-11-23 사용자): 첫 화면 오른쪽 '마감재 내보내기 / 제안서 만들기'와 같은 모양 — 글자 왼쪽 · 화살표 오른쪽, 16px */
+.project-detail-dialog .detail-btn{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:51px;box-sizing:border-box;margin:0;padding:0 18px;border:1px solid #39352f;border-radius:0;font-size:16px;font-weight:400;text-decoration:none;text-align:left}
+.project-detail-dialog .detail-btn.dark{background:#39352f;color:#fff}
+.project-detail-dialog .detail-btn-line{background:transparent;color:#39352f}
+.project-detail-dialog .detail-btn-line:hover{background:#39352f;color:#fff}
+.project-detail-dialog .detail-export-col{min-width:300px}
+/* 아래 버튼 줄이 창 아래 끝까지 붙게(그 밑으로 내용이 비치지 않게) — 창 안쪽 여백만큼 늘리고 창과 같은 바탕 */
+.project-detail-dialog .project-detail-actions{bottom:-28px;margin:24px -28px -28px;padding:16px 28px 28px;background:#fbfaf7}
+@media(max-width:760px){.project-detail-dialog .project-detail-actions{bottom:-20px;margin:20px -20px -20px;padding:14px 20px 20px}.project-detail-dialog .detail-export-col{min-width:0;flex:1}}
+
+/* Electrical plates: one 200mm-wide frame per card/option, transparent margins excluded. */
+.electrical-stage{position:relative;display:flex;width:100%;aspect-ratio:1;align-items:center;justify-content:center;overflow:hidden}
+.electrical-plate{display:block;position:relative;overflow:hidden;flex:none}
+.material-image>.electrical-stage{position:absolute;inset:0;height:100%}
+.electrical-tabs,.electrical-pages{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.electrical-tabs button,.electrical-pages button{padding:10px 14px;font:inherit;border:1px solid var(--line,#d9d3c7);background:transparent;color:inherit}
+.electrical-tabs [aria-pressed=true],.electrical-pages [aria-pressed=true]{background:#38352f;color:#fff}
+.electrical-page-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px}
+.electrical-page-title h3{font-size:18px;margin:0}
+.electrical-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.electrical-options figure{margin:0;min-width:0}
+.electrical-options .electrical-stage{background:#f0ede5;aspect-ratio:5/4}
+.electrical-options figcaption{display:grid;gap:5px;padding:12px 0 20px;font-size:14px;line-height:1.5}
+.electrical-options figcaption span{color:#8c8578}
+@media(max-width:540px){.electrical-options{gap:12px}.electrical-tabs button{padding:8px 10px;font-size:13px}.electrical-options figcaption{font-size:12px}}
+
+.electrical-ways{display:flex;gap:8px}.electrical-ways button{padding:6px 16px;background:transparent;border:1px solid #d9d3c7;color:inherit;font:inherit}.electrical-ways [aria-pressed=true]{background:#38352f;color:white}.electrical-options [data-electrical-add]{justify-self:start;border:1px solid #d9d3c7;background:transparent;padding:8px 12px;color:inherit;font:inherit}.electrical-originals{margin:24px 0}.electrical-originals summary{cursor:pointer}.electrical-originals h4{margin-top:24px}
+
+/* Legrand-only catalog: other brands and mixed categories keep their layout. */
+#catalog.approved-electrical-only{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){#catalog.approved-electrical-only{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){#catalog.approved-electrical-only{grid-template-columns:minmax(0,1fr)}}
+
+.approved-sheet{display:block;width:100%;height:auto;max-height:none;object-fit:contain;margin:16px 0}.approved-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.approved-options section{padding:12px;border-top:1px solid #dcd4c7;min-width:0;overflow-wrap:anywhere}.approved-options h3{font-size:16px}.approved-options p{margin:8px 0;font-size:14px}.electrical-tabs{flex-wrap:wrap}@media(max-width:520px){.approved-options{grid-template-columns:1fr}}
+
+/* Category changes must not change the page canvas or editorial geometry.
+   Only the electrical card grid is responsive; the shared page layout stays stable. */
+#catalog.approved-electrical-only{--catalog-columns:3!important}
+@media(max-width:900px){#catalog.approved-electrical-only{--catalog-columns:2!important}}
+@media(max-width:520px){#catalog.approved-electrical-only{--catalog-columns:1!important}}
+
+/* Approved electrical options: one synchronized image and information set. */
+.approved-gallery{outline:none;min-width:0}
+.approved-gallery-stage{position:relative;--gallery-height:clamp(220px,38vh,400px);height:var(--gallery-height);background:#f2efe7;touch-action:pan-y;overflow:hidden}
+.approved-gallery-stage img{display:block;width:100%;height:100%;object-fit:contain;user-select:none}
+.approved-gallery-nav{display:flex;align-items:center;justify-content:center;gap:24px;margin:12px 0}
+.approved-gallery-nav button{min-height:44px;padding:8px 18px}
+.approved-gallery-nav button:disabled{opacity:.35;cursor:default}
+.approved-gallery-nav span{min-width:65px;text-align:center;font-variant-numeric:tabular-nums}
+.approved-gallery-info{padding:16px 0;overflow-wrap:anywhere}
+.approved-gallery-info h3{margin:0 0 14px;font-size:20px}
+.approved-gallery-info dl{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px 16px;margin:0}
+.approved-gallery-info dt{color:#918a7e}.approved-gallery-info dd{margin:0}
+.approved-gallery-actions{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:18px}
+.approved-gallery-comparison{border-top:1px solid #dcd4c7;padding:16px 0;margin:8px 0}
+.approved-gallery-comparison summary{cursor:pointer}.approved-gallery-comparison figure{margin:20px 0}
+@media(max-width:520px){.approved-gallery-stage{--gallery-height:clamp(210px,32vh,280px)}.approved-gallery-nav{gap:12px}.approved-gallery-info h3{font-size:18px}.approved-gallery-actions .dark{width:100%}}
+
+/* A single overview precedes all individual options, including multi-sheet lines. */
+.approved-gallery-stage.is-overview{height:auto;max-height:min(600px,65vh);overflow-y:auto;background:transparent}
+.approved-gallery-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.approved-gallery-overview.many-options{grid-template-columns:repeat(4,minmax(0,1fr))}
+button.approved-overview-option{display:flex;flex-direction:column;gap:6px;min-width:0;padding:0;border:0;background:transparent;text-align:center;color:inherit}
+.approved-overview-photo{position:relative;display:block;width:100%;height:var(--gallery-height);--gallery-height:100px;background:#f2efe7;overflow:hidden}
+.approved-overview-name{display:block;width:100%;font-size:12px;line-height:1.35;overflow-wrap:anywhere}
+.approved-overview-hint{margin:0;color:#918a7e;font-size:13px}
+@media(max-width:520px){.approved-gallery-overview{gap:10px 8px}.approved-overview-photo{--gallery-height:74px}.approved-gallery-overview.many-options .approved-overview-photo{--gallery-height:56px}.approved-overview-name{font-size:11px}.approved-gallery-nav{gap:8px}.approved-gallery-nav span{font-size:13px;min-width:94px}.approved-gallery-nav button{padding:8px 12px}}
+
+.approved-gallery-overview-back{display:block;margin:0 auto 16px;min-height:44px;padding:8px 20px}.approved-gallery-overview-back[hidden]{display:none}
+
+.approved-gallery-colors{display:flex;flex-wrap:nowrap;overflow-x:auto;max-width:100%;gap:10px;margin:12px 0 18px}.approved-gallery-colors button{flex-shrink:0;display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px}.approved-gallery-colors button[aria-pressed="true"]{border-color:#b94725}.approved-gallery-swatch{width:22px;height:22px;border:1px solid #aaa;border-radius:50%;display:inline-block}.approved-gallery-swatch.is-white{background:#f2f1ed}.approved-gallery-swatch.is-dark-grey{background:#505153}
+
+/* One persistent option list beside a synchronized selected product. */
+.approved-selector{min-width:0}.approved-selector-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 16px;font-size:14px;overflow-wrap:anywhere}
+.approved-selector-meta{height:20px;flex-wrap:nowrap}.approved-selector-meta span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.approved-selector-meta:empty{visibility:hidden}.approved-selector-meta strong{font-weight:400;margin-left:10px}.approved-selector-meta a{color:inherit}
+.approved-selector-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:24px;align-items:start}
+.approved-selector-list{min-width:0}.approved-selector-list h3{font-size:14px;margin:0 0 10px}.approved-selector-list h3 span{color:#918a7e;font-weight:400;margin-left:8px}
+.approved-option-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px;max-height:520px;overflow-y:auto;overscroll-behavior:contain;padding:3px;scrollbar-gutter:stable}
+.approved-option-list button{padding:4px;border:1px solid transparent}.approved-option-list button[aria-pressed="true"]{border-color:#b94725;background:#f2efe7}.approved-option-list button:focus-visible{outline:2px solid #b94725;outline-offset:0}
+.approved-option-list .approved-overview-photo{--gallery-height:80px}.approved-selected-product{min-width:0}.approved-selected-product .approved-gallery-actions{justify-content:flex-end;align-items:center;gap:8px}.approved-selected-product .approved-gallery-actions button{flex:0 0 auto;width:auto;white-space:nowrap}
+@media(max-width:600px){
+ .approved-selector-layout{grid-template-columns:minmax(0,1fr);gap:14px}
+ .approved-option-list{max-height:180px;gap:8px;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .approved-option-list .approved-overview-photo{--gallery-height:56px}
+ .approved-selector-meta{font-size:12px;margin-bottom:12px}
+ .approved-selected-product .approved-gallery-stage{--gallery-height:clamp(160px,26vh,220px)}
+ .approved-selected-product .approved-gallery-info{padding:12px 0}.approved-selected-product .approved-gallery-info h3{margin-bottom:10px;font-size:16px}
+ .approved-selected-product .approved-gallery-actions{margin-top:12px}
+}
+
+/* Reserve the link row so option metadata cannot move the photo or link. */
+.approved-product-link{height:24px;margin-bottom:8px;display:flex;align-items:center;justify-content:flex-end;font-size:14px;white-space:nowrap}.approved-product-link a{color:inherit}
+@media(max-width:600px){.approved-product-link{font-size:12px}}
+
+/* ===== 2026-11-25 자재룸 수정사항 ===== */
+/* 5) 맨 위 한 줄 헤더: 왼쪽 로고·메뉴, 오른쪽 상담 묶음 */
+.workspace-bar.top-header{gap:28px;padding:10px 2.6%;min-height:64px}
+.top-header .top-brand{display:flex;align-items:center;flex-shrink:0}
+.top-header .top-brand img{width:104px;height:42px;object-fit:contain;mix-blend-mode:multiply}
+.top-header .top-nav{margin-left:0;gap:24px}
+.top-header .top-nav a,.top-header .top-nav button{font-size:14px;color:#292621;border:0;background:none;padding:10px 0;min-height:0}
+.top-header .top-nav .active{color:#bc4d29}
+.top-header .admin-menu{font-size:13px;color:#6f685d}
+.top-header .admin-menu summary{cursor:pointer;list-style:none;padding:10px 0}
+.top-header .admin-menu[open] .header-actions{position:absolute;top:100%;left:2.6%;right:auto;z-index:90;display:flex;flex-wrap:wrap;gap:8px;padding:12px;background:#fbfaf7;border:1px solid #d9d1c3}
+.top-header .workspace-group{display:flex;align-items:center;gap:14px;margin-left:auto;min-width:0}
+.top-header .workspace-group .current-project{flex:0 1 auto}
+.site-content{padding-top:8px}
+@media(max-width:900px){.workspace-bar.top-header{gap:10px;padding:8px 12px}.top-header .top-brand img{width:78px;height:32px}.top-header .top-nav{gap:12px}.top-header .top-nav a,.top-header .top-nav button{font-size:12px}.top-header .admin-menu{display:none}.top-header .workspace-group{width:100%;margin-left:0;gap:8px}.top-header [data-ui="project"]{display:inline-flex;align-items:center;white-space:nowrap}.top-header .workspace-group{flex-wrap:wrap}.top-header .workspace-group #saveState{flex-basis:100%}}
+/* 1·3) 전체 탭 · 더 보기 · 다른 분류 결과 안내 · 하트 초기화 */
+.catalog .catalog-more{grid-column:1/-1;justify-self:center;margin:18px 0 6px;padding:12px 28px;border:1px solid #cfc7b9;background:#fbfaf7;font-size:13px;color:#292621;cursor:pointer}
+.catalog .catalog-more span{color:#9a9184}
+.search-elsewhere{margin:-6px 0 16px;padding:10px 14px;background:#f4f0e7;border-left:2px solid #bc4d29;font-size:13px;color:#4a4439}
+.search-elsewhere button{border:0;background:none;padding:0 0 0 8px;color:#bc4d29;font-size:13px;cursor:pointer}
+.list-title .reset-fav{margin-left:auto;font-size:12px;padding:6px 12px;border:1px solid #cfc7b9;background:transparent;color:#6f685d;cursor:pointer}
+/* 6) 상담지 접기 화살표 · 접혔을 때 오른쪽 끝 탭 */
+.consultation-rail .rail-fold{font-size:26px;line-height:1}
+.rail-tab{display:none}
+body.consultation-closed .rail-tab{display:flex;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:85;flex-direction:column;align-items:center;gap:8px;padding:14px 8px;background:#39352f;color:#fff;border:0;border-radius:6px 0 0 6px;cursor:pointer;box-shadow:-2px 2px 10px #0002}
+.rail-tab span{font-size:20px;line-height:1}
+.rail-tab b{writing-mode:vertical-rl;font-weight:400;font-size:13px;letter-spacing:2px}
+.rail-tab em{font-style:normal;font-size:11px;min-width:20px;padding:2px 5px;border-radius:9px;background:#bc4d29;text-align:center}
+
+/* Approved common product detail: one information baseline for every material. */
+#detailDialog{width:960px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:30px 38px}
+#detailContent{font-size:17px;min-width:0}
+#detailContent .dialog-head{align-items:flex-start;margin-bottom:0;gap:20px}
+#detailContent .dialog-head h2{font-size:31px;font-weight:600;line-height:1.25;letter-spacing:-1px;margin:0;overflow-wrap:anywhere}
+#detailContent .common-detail-link{height:30px;margin:12px 0 10px;display:flex;align-items:center;justify-content:flex-end}
+#detailContent .common-detail-link .source-link{margin:0;font-size:17px}
+#detailContent>.detail-image{display:block;width:100%;height:370px;max-height:none;object-fit:contain;margin:0;border-radius:5px;background:#f1efe7}
+#detailContent .common-detail-footer{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 24px;border-top:1px solid var(--line);padding:18px 0 0;margin:22px 0 0}
+#detailContent .common-detail-footer .detail-data{display:grid;grid-template-columns:95px minmax(0,1fr);gap:8px 12px;font-size:17px;line-height:23px;margin:0;flex:1 1 520px;min-width:0}
+#detailContent .common-detail-footer dt{color:var(--muted);line-height:23px!important;padding:0!important;align-self:start}
+#detailContent .common-detail-footer dd{margin:0;min-width:0;overflow-wrap:anywhere}
+#detailContent .common-detail-footer .detail-actions{display:flex;flex:0 0 auto;justify-content:flex-end;gap:8px;margin:0;align-items:center}
+#detailContent .common-detail-footer .detail-actions button{width:auto;flex:none;font-size:17px;line-height:23px;padding:11px 18px;white-space:nowrap}
+#detailContent .approved-selector-layout{grid-template-columns:minmax(0,36fr) minmax(0,64fr);gap:30px;margin-top:12px}
+#detailContent .approved-selector-list h3{height:30px;margin:0 0 10px;display:flex;align-items:center;font-size:17px;font-weight:400}
+#detailContent .approved-product-link{height:30px;margin:0 0 10px;font-size:17px}
+#detailContent .approved-gallery-stage{--gallery-height:370px;border-radius:5px}
+#detailContent .approved-option-list{height:370px;max-height:370px;align-content:start;gap:12px 8px}
+#detailContent .approved-option-list .approved-overview-photo{--gallery-height:80px}
+#detailContent .approved-gallery-info .approved-gallery-colors{margin:0}
+@media(max-width:600px){
+ #detailDialog{padding:20px 18px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px)}
+ #detailContent .dialog-head h2{font-size:25px}
+ #detailContent .approved-selector-layout{grid-template-columns:minmax(0,1fr);gap:14px}
+ #detailContent .approved-option-list{height:auto;max-height:180px}
+ #detailContent .approved-option-list .approved-overview-photo{--gallery-height:56px}
+ #detailContent>.detail-image{height:280px}
+ #detailContent .approved-gallery-stage{--gallery-height:280px}
+ #detailContent .common-detail-footer .detail-data{grid-template-columns:72px minmax(0,1fr);flex-basis:100%;gap:8px 10px}
+ #detailContent .common-detail-footer .detail-actions{width:100%;flex-wrap:wrap}
+ #detailContent .common-detail-footer .detail-actions button{padding:10px 12px}
+}
+#detailContent .common-detail-footer dt,#detailContent .common-detail-footer dd{font-size:17px;font-weight:400}
+#detailContent>.detail-image{padding:26px}
+@media(max-width:600px){#detailContent>.detail-image{padding:18px}}
+
+/* Compact only the electrical option selector; other material dialogs retain their width. */
+@media(min-width:601px){
+ #detailDialog:has(.approved-selector){width:960px;padding-inline:28px}
+ #detailContent .approved-selector-layout{gap:18px}
+}
+
+/* Tile detail width only; existing mobile and other category rules stay unchanged. */
+@media(min-width:601px){#detailDialog:has(.tile-detail){width:960px}}
+
+#tileGroutPalette { min-width:0; padding:8px 0; }
+#tileGroutPalette > strong { display:block; margin:4px 0 6px; font-size:12px; }
+#tileGroutPalette > div { display:flex; flex-wrap:wrap; gap:4px; }
+#tileGroutPalette > div button { display:inline-flex; align-items:center; gap:5px; padding:4px 7px; min-height:28px; border:1px solid var(--line); background:#fff; color:var(--ink); font-size:12px; cursor:pointer; }
+#tileGroutPalette > div button img { width:18px; height:18px; object-fit:cover; }
+#tileGroutPalette > div button:hover, #tileGroutPalette > div button:focus-visible { border-color:var(--ink); }
+
+/* Saved project shortcuts: explicit project links and per-project export. */
+.saved-project-entry{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:0;padding-bottom:18px}
+.saved-project-entry .saved-project-row{grid-column:1;grid-row:1;width:100%;padding-bottom:12px}
+.saved-project-entry .project-row-menu{grid-column:2;grid-row:1/3}
+.saved-project-actions{grid-column:1;grid-row:2;display:flex;gap:10px;flex-wrap:wrap;padding:0 4px}
+.saved-project-actions a,.saved-project-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 14px;border:1px solid #D9D1C3;background:transparent;color:#38352f;font-size:13px;font-weight:400;text-decoration:none;line-height:1.4;border-radius:0}
+.saved-project-actions a:hover,.saved-project-actions button:hover{background:#F1EEE5}
+.saved-project-actions button:disabled{opacity:.45;cursor:default}
+@media(max-width:600px){.saved-project-entry{column-gap:8px}.saved-project-actions{grid-column:1/-1;gap:8px}.saved-project-entry .project-row-menu{grid-row:1}.saved-project-actions a,.saved-project-actions button{flex:1;min-height:44px;padding:9px 8px;font-size:12px;white-space:nowrap}.saved-project-entry .saved-project-row{grid-template-columns:minmax(0,1fr) auto}}
+
+/* Compact customer projects: information left, actions right; recovery always accessible. */
+#customerProjectsDialog[open]{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;width:min(960px,94vw)}
+#customerProjectsDialog>.dialog-head{grid-column:1/-1}
+#customerProjectsIntro{display:none}
+#customerProjectsDialog>.project-search{grid-column:1;grid-row:2;margin:8px 0 0}
+#customerProjectsDialog>.project-search>span{display:none}
+#customerProjectsDialog>.list-new-project{grid-column:2;grid-row:2;margin:8px 0 0;min-height:46px}
+#customerProjectsCount,#customerProjectsList,#customerProjectsEmpty,#projectTrashToggle{grid-column:1/-1}
+#customerProjectsList .saved-project-entry{grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+#customerProjectsList .saved-project-row{display:block;grid-column:1;grid-row:1;padding:4px;border:0;min-width:0}
+#customerProjectsList .saved-project-name small{margin-top:3px}
+#customerProjectsList .saved-project-actions{grid-column:2;grid-row:1;flex-wrap:nowrap;padding:0;gap:8px}
+#customerProjectsList .saved-project-actions>*{white-space:nowrap;padding:9px 12px}
+#customerProjectsList .project-proposal-action{background:#39352f;color:#fff;border-color:#39352f}
+#customerProjectsList .project-row-menu{grid-column:3;grid-row:1}
+#customerProjectsList .project-row-menu summary{border:0;padding:8px;min-width:36px;text-align:center}
+#projectTrashToggle{justify-self:start;margin:16px 0 0;font-size:13px}
+@media(max-width:600px){#customerProjectsList .saved-project-entry{grid-template-columns:minmax(0,1fr) auto;gap:8px}#customerProjectsList .saved-project-actions{grid-column:1/-1;grid-row:2}#customerProjectsList .project-row-menu{grid-column:2}#customerProjectsList .saved-project-actions>*{flex:1;padding:9px 8px}#customerProjectsList .saved-project-name{display:block}}
+
+/* Keep project entry readable and compact in the app side pane. */
+@media(max-width:900px){.workspace-bar.top-header{gap:8px;padding:8px 12px}.top-header .workspace-group{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;width:100%}.top-header .workspace-group>button{min-height:34px;padding:6px 9px;font-size:11px;line-height:1.4}.top-header [data-ui="project"]{display:inline-flex;align-items:center;white-space:nowrap}.top-header .workspace-group .current-project{width:100%;min-width:0;gap:5px;padding-inline:2px}.top-header .current-project strong{font-size:11px;max-width:none;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.top-header .current-project span{font-size:10px}.top-header .workspace-group #saveState{grid-column:1/-1;width:100%;font-size:10px;line-height:1.4}.top-header .top-brand img{width:68px;height:28px}.top-header .top-nav a,.top-header .top-nav button{font-size:11px;padding:6px 0}.top-header .top-nav{gap:12px}}
+
+
+/* Approved curved ceiling lights: centered alpha bounds, one width scale across nine finishes. */
+.material-image > img[alt^="히트조명_커브드 "]{position:absolute!important;inset:auto!important;left:50%!important;top:50%!important;width:var(--curved-width,90%)!important;height:auto!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center!important;transform:translate(-50%,-50%)!important;}
+.material-image > img[alt^="히트조명_커브드 50W 1P 화이트"]{--curved-width:41.372896%;}
+.material-image > img[alt^="히트조명_커브드 60W 1P 화이트"]{--curved-width:41.372896%;}
+.material-image > img[alt^="히트조명_커브드 60W 1P 블랙"]{--curved-width:40.549159%;}
+.material-image > img[alt^="히트조명_커브드 120W 2P 화이트"]{--curved-width:59.601417%;}
+.material-image > img[alt^="히트조명_커브드 120W 2P 블랙"]{--curved-width:59.176262%;}
+.material-image > img[alt^="히트조명_커브드 120W 3P 화이트"]{--curved-width:83.516386%;}
+.material-image > img[alt^="히트조명_커브드 120W 3P 블랙"]{--curved-width:83.516386%;}
+.material-image > img[alt^="히트조명_커브드 180W 3P 화이트"]{--curved-width:90.000000%;}
+.material-image > img[alt^="히트조명_커브드 180W 3P 블랙"]{--curved-width:89.176262%;}
+
+/* Catalog changes and lazy images must not scroll-anchor the viewport to an old card. */
+.library{overflow-anchor:none}
+.catalog-family-heading{grid-column:1/-1;margin:18px 0 0;font-size:16px;font-weight:500;border-bottom:1px solid #dcd4c7;padding-bottom:12px}
+.lighting-option-nav{display:flex;align-items:center;justify-content:center;gap:20px;margin:16px 0}
+.lighting-option-nav button{padding:8px 14px}
+.lighting-option-nav button:disabled{opacity:.35;cursor:default}
+
+#detailContent .lighting-single-option .approved-selector-layout{grid-template-columns:1fr}
+.lighting-single-option .approved-selector-list{display:none}
+/* Reserve the existing photographs' intrinsic size before their network load. */
+.reference-kitchen img{aspect-ratio:1122 / 1402}
+.reference-chair{aspect-ratio:1024 / 1536}
+
+/* Fan diameter choices stay visible without pushing the picture off the modal center. */
+#detailContent .lighting-fan-selector .approved-selector-layout{grid-template-columns:1fr;gap:12px}
+#detailContent .lighting-fan-selector .approved-selector-list h3{display:none}
+#detailContent .lighting-fan-selector .approved-option-list{height:auto;align-items:center;display:flex;justify-content:center;gap:10px;overflow:auto;max-height:none}
+#detailContent .lighting-fan-selector .approved-overview-option{height:auto;flex:none;width:auto;min-width:90px;padding:10px 16px}
+.lighting-fan-selector .approved-overview-photo{display:none}
+.lighting-fan-selector .approved-overview-name{margin:0}
+.lighting-fan-selector .lighting-option-nav{display:none}
+.fan-image-note{position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:12px;color:#928c80;margin:8px}
